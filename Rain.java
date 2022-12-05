@@ -67,7 +67,7 @@ public class Rain extends JDialog implements ActionListener {
 				int endPos = posArr[currentColumn];
 				g2d.setColor(new Color(random.nextInt(255), random.nextInt(255), random.nextInt(255)));
 				g2d.drawString(String.valueOf(getChr()), x, endPos * gap);
-				for (int j = lines - 30; j < endPos; j++) {
+				for (int j = 0; j < endPos; ++j) {
 					g2d.setColor(new Color(random.nextInt(255), random.nextInt(255), random.nextInt(255)));
 					g2d.drawString(String.valueOf(getChr()), x, j * gap);
 				}
@@ -85,8 +85,6 @@ public class Rain extends JDialog implements ActionListener {
 			backgroundColor = new Color(random.nextInt(255), random.nextInt(255), random.nextInt(255));
 			if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
 				System.exit(0);
-			} else if (e.getKeyCode() == KeyEvent.VK_SPACE) {
-				
 			}
 		}
 	}
